@@ -65,8 +65,10 @@ https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html#eks-config
 We need to configure `kubectl` so it knows how to authenticate and connect to your new AWS EKS Kubernetes cluster.
 
 `kubectl` uses config files called `kubeconfig` to store your cluster information.
+To create your kubeconfig file **automatically**:
+`aws eks --region <region> update-kubeconfig --name <cluster-name>`
 
-To create your kubeconfig file:
+To create your kubeconfig file **manually**:
 
 1.) Create the default ~/.kube directory if it does not already exist.
 ```
